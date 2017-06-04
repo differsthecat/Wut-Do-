@@ -15,6 +15,8 @@
 		001794D71EDB5FDE00ED0F46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001794D51EDB5FDE00ED0F46 /* LaunchScreen.storyboard */; };
 		001794E01EDB660E00ED0F46 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001794DF1EDB660E00ED0F46 /* MapKit.framework */; };
 		001794E21EDB6E0800ED0F46 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001794E11EDB6E0800ED0F46 /* SearchViewController.swift */; };
+		089B4C061EE4A9FC00727CB8 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 089B4C051EE4A9FC00727CB8 /* Property List.plist */; };
+		F4E256568C7F9750DE14D4C1 /* Pods_Wut_Do_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B24A4DE6A02B286EE66C92C /* Pods_Wut_Do_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,11 @@
 		001794D81EDB5FDE00ED0F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		001794DF1EDB660E00ED0F46 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		001794E11EDB6E0800ED0F46 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		089B4C051EE4A9FC00727CB8 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
+		089B4C071EE4B22D00727CB8 /* Wut Do?-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wut Do?-Bridging-Header.h"; sourceTree = "<group>"; };
+		0B24A4DE6A02B286EE66C92C /* Pods_Wut_Do_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wut_Do_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1334398F012157A40CEE77A2 /* Pods-Wut Do?.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wut Do?.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wut Do?/Pods-Wut Do?.release.xcconfig"; sourceTree = "<group>"; };
+		A2347BC8AAB6472D3F0F8929 /* Pods-Wut Do?.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wut Do?.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wut Do?/Pods-Wut Do?.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				001794E01EDB660E00ED0F46 /* MapKit.framework in Frameworks */,
+				F4E256568C7F9750DE14D4C1 /* Pods_Wut_Do_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +56,7 @@
 				001794C91EDB5FDE00ED0F46 /* Wut Do? */,
 				001794C81EDB5FDE00ED0F46 /* Products */,
 				001794DE1EDB660E00ED0F46 /* Frameworks */,
+				99D07087D4A1503E88D5A759 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +79,8 @@
 				001794D31EDB5FDE00ED0F46 /* Assets.xcassets */,
 				001794D51EDB5FDE00ED0F46 /* LaunchScreen.storyboard */,
 				001794D81EDB5FDE00ED0F46 /* Info.plist */,
+				089B4C051EE4A9FC00727CB8 /* Property List.plist */,
+				089B4C071EE4B22D00727CB8 /* Wut Do?-Bridging-Header.h */,
 			);
 			path = "Wut Do?";
 			sourceTree = "<group>";
@@ -78,8 +89,18 @@
 			isa = PBXGroup;
 			children = (
 				001794DF1EDB660E00ED0F46 /* MapKit.framework */,
+				0B24A4DE6A02B286EE66C92C /* Pods_Wut_Do_.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99D07087D4A1503E88D5A759 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2347BC8AAB6472D3F0F8929 /* Pods-Wut Do?.debug.xcconfig */,
+				1334398F012157A40CEE77A2 /* Pods-Wut Do?.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 001794DB1EDB5FDE00ED0F46 /* Build configuration list for PBXNativeTarget "Wut Do?" */;
 			buildPhases = (
+				79478E889235CA65BC39DFFA /* [CP] Check Pods Manifest.lock */,
 				001794C31EDB5FDE00ED0F46 /* Sources */,
 				001794C41EDB5FDE00ED0F46 /* Frameworks */,
 				001794C51EDB5FDE00ED0F46 /* Resources */,
+				76B4033AB0B852E72DA507A1 /* [CP] Embed Pods Frameworks */,
+				5BE2F38CF3C239B9B93A7CA1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -114,6 +138,7 @@
 				TargetAttributes = {
 					001794C61EDB5FDE00ED0F46 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -148,11 +173,60 @@
 			files = (
 				001794D71EDB5FDE00ED0F46 /* LaunchScreen.storyboard in Resources */,
 				001794D41EDB5FDE00ED0F46 /* Assets.xcassets in Resources */,
+				089B4C061EE4A9FC00727CB8 /* Property List.plist in Resources */,
 				001794D21EDB5FDE00ED0F46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BE2F38CF3C239B9B93A7CA1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wut Do?/Pods-Wut Do?-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76B4033AB0B852E72DA507A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wut Do?/Pods-Wut Do?-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79478E889235CA65BC39DFFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		001794C31EDB5FDE00ED0F46 /* Sources */ = {
@@ -283,24 +357,31 @@
 		};
 		001794DC1EDB5FDE00ED0F46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2347BC8AAB6472D3F0F8929 /* Pods-Wut Do?.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Wut Do?/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RobynBankzProductions.Wut-Do-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wut Do?/Wut Do?-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		001794DD1EDB5FDE00ED0F46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1334398F012157A40CEE77A2 /* Pods-Wut Do?.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Wut Do?/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RobynBankzProductions.Wut-Do-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Wut Do?/Wut Do?-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -324,6 +405,7 @@
 				001794DD1EDB5FDE00ED0F46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

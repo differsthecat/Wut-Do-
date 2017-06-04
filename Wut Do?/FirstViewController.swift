@@ -23,9 +23,25 @@ class FirstViewController: UIViewController {
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
         }
-
-//        mapView?.region
         
+        //The following code gets the Google API key
+        //get the path of the plist file
+        guard let plistPath = Bundle.main.path(forResource: "Property List", ofType: "plist") else { return }
+        //load the plist as data in memory
+        guard let plistData = FileManager.default.contents(atPath: plistPath) else { return }
+        //use the format of a property list (xml)
+        var format = PropertyListSerialization.PropertyListFormat.xml
+        //convert the plist data to a Swift Dictionary
+        guard let  plistDict = try! PropertyListSerialization.propertyList(from: plistData, options: .mutableContainersAndLeaves, format: &format) as? [String : AnyObject] else { return }
+        //access the values in the dictionary
+        if let apiKey = plistDict["Google API Key"] as? String {
+            //do something with your value
+            GMSServices.provideAPIKey(apiKey)
+            print(apiKey)
+        }
+        
+        
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
