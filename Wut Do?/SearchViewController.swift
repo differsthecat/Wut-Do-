@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class SearchViewController: UIViewController {
+    @IBOutlet fileprivate weak var tableView: UITableView!
 
     var region: MKCoordinateRegion? {
         didSet {
@@ -18,8 +19,20 @@ class SearchViewController: UIViewController {
             }
         }
     }
+    
+//    let otherData = ["hello", "robyn", "how", "are", "you", "?"]
 
     private var localSearch: MKLocalSearch?
+    fileprivate var mapItems = [MKMapItem]() {
+        didSet {
+            tableView.reloadData()
+            
+//            tableView.reloadSections(
+//                IndexSet(integer: 0),
+//                with: .fade
+//            )
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +63,60 @@ class SearchViewController: UIViewController {
 
         localSearch = MKLocalSearch(request: request)
         localSearch!.start { response, error in
-            print(response)
+//            print(response)
+//            for item in response!.mapItems {
+//                print("Name = \(item.name)")
+//            }
+            guard let response = response else {
+                return
+            }
+            
+            self.mapItems = response.mapItems
         }
     }
 }
+
+extension SearchViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return mapItems.count
+        
+//        if section == 0 {
+//            return mapItems.count
+//        }
+//        
+//        return otherData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+
+        let mapItem = mapItems[indexPath.row]
+                      cell.textLabel?.text = mapItem.name
+        
+//        if indexPath.section == 0 {
+//            let mapItem = mapItems[indexPath.row]
+//            cell.textLabel?.text = mapItem.name
+//        } else {
+//            let str = otherData[indexPath.row]
+//            cell.textLabel?.text = str
+//        }
+        
+        return cell
+    }
+}
+
+extension SearchViewController: UITableViewDelegate {
+    
+}
+
+
+
+
+
+
+

@@ -59,12 +59,50 @@
                     <view key="view" contentMode="scaleToFill" id="rUP-m8-eLP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wm3-qp-85t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" textLabel="jAk-R9-xx2" style="IBUITableViewCellStyleDefault" id="SHY-P4-6P8">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SHY-P4-6P8" id="5M4-13-2U9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jAk-R9-xx2">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Kf0-gX-Kvw" id="CQR-tA-zzn"/>
+                                    <outlet property="delegate" destination="Kf0-gX-Kvw" id="X9s-G2-Jqh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lVU-Mo-wjy" firstAttribute="top" secondItem="wm3-qp-85t" secondAttribute="bottom" id="7yp-CL-Jmh"/>
+                            <constraint firstItem="wm3-qp-85t" firstAttribute="leading" secondItem="rUP-m8-eLP" secondAttribute="leading" id="P5f-68-KzF"/>
+                            <constraint firstAttribute="trailing" secondItem="wm3-qp-85t" secondAttribute="trailing" id="uYv-kD-rXd"/>
+                            <constraint firstItem="wm3-qp-85t" firstAttribute="top" secondItem="oek-x5-wD9" secondAttribute="bottom" constant="-64" id="zlp-zu-u56"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="wm3-qp-85t" id="V4i-09-BV5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxX-sP-MjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2601" y="-323"/>
+            <point key="canvasLocation" x="2557.5999999999999" y="-321.58920539730138"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
